@@ -9,12 +9,20 @@ Resources:
   JavaLambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: com.sergio.StreamLambdaHandler::handleRequest
-      Runtime: java17
+      Handler: com.eommt.StreamLambdaHandler::handleRequest
+      Runtime: java21
       CodeUri: .
       MemorySize: 512
       Policies: AWSLambdaBasicExecutionRole
       Timeout: 30
+      Environment:
+        Variables:
+          SPRING_PROFILES_ACTIVE: production
+          DB_HOST: apieommt-test2.ckp2ww6u8gac.us-east-1.rds.amazonaws.com
+          DB_PORT: 5432
+          DB_NAME: test
+          DB_USER: postgres
+          DB_PASSWORD: 0f54rkrCo31j
       Events:
         ProxyResource:
           Type: Api
