@@ -1,9 +1,10 @@
-package com.sergio;
+package com.eommt;
 
-import com.sergio.controllers.HelloController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
+
+import com.eommt.controllers.HelloController;
 
 
 @SpringBootApplication

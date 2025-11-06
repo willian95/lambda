@@ -1,4 +1,4 @@
-package com.sergio;
+package com.eommt;
 
 
 import com.amazonaws.serverless.exceptions.ContainerInitializationException;

@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.production
+    volumes:
+      - ./target:/app/target
+    environment:
+      - SPRING_PROFILES_ACTIVE=production
+    env_file:
+      - .env.production
+    

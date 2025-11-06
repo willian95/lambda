@@ -1,4 +1,4 @@
-package com.sergio;
+package com.eommt;
 
 
 import com.amazonaws.serverless.proxy.internal.LambdaContainerHandler;
@@ -6,6 +6,7 @@ import com.amazonaws.serverless.proxy.internal.testutils.AwsProxyRequestBuilder;
 import com.amazonaws.serverless.proxy.internal.testutils.MockLambdaContext;
 import com.amazonaws.serverless.proxy.model.AwsProxyResponse;
 import com.amazonaws.services.lambda.runtime.Context;
+import com.eommt.StreamLambdaHandler;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

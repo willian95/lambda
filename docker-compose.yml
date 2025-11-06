@@ -1,0 +1,21 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    env_file:
+      - .env
+    volumes:
+      - ./src:/app/src
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: ${DB_NAME:-mydatabase}
+      POSTGRES_USER: ${DB_USER:-user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-password}
+    ports:
+      - "5432:5432"

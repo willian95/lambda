@@ -1,4 +1,4 @@
-package com.sergio.dtos;
+package com.eommt.dtos;
 
 public record MessageDto(String content) {
 }
